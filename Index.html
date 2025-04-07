@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saiprasad Thirupathi | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --primary: #0f62fe;
+      --secondary: #e5f0ff;
+      --accent: #ffdd57;
+      --text: #1f1f1f;
+      --bg: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 0;
+    }
+
+    header.hero {
+      background: linear-gradient(135deg, var(--primary), #003cb3);
+      color: white;
+      padding: 100px 0 60px;
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 15px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: var(--accent);
+      color: black;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #f0c900;
+    }
+
+    .download-btn {
+      background-color: orange;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: darkorange;
+    }
+
+    section {
+      background: var(--secondary);
+      margin: 30px 0;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: 0.5s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    ul.skills-list,
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    li {
+      background: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .timeline-item {
+      background: white;
+      padding: 15px;
+      border-left: 5px solid var(--primary);
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      ul.skills-list {
+        flex-direction: column;
+      }
+
+      .header-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container header-flex">
+      <div>
+        <img src="saiprasad.jpg" alt="Profile photo of Saiprasad Thirupathi">
+        <h1>Hi, I'm <span>Saiprasad Thirupathi</span></h1>
+        <p>Web Developer | Graphic Designer | SQL Developer</p>
+        <a href="#contact" class="btn">Contact Me</a>
+      </div>
+      <a href="resume.pdf" class="download-btn" download>Download Resume</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a B-Tech graduate in Computer Science Engineering with professional experience in both software engineering and administrative roles. I’ve worked in India and Kuwait, bringing versatile skills in web technologies and system management.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>System Management</li>
+        <li>Excel</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2>Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Associate Software Engineer</h3>
+          <p><strong>Varito Solutions Pvt Ltd, India</strong> (2023–2024)</p>
+          <p>Managed data and supported technical roles.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Admin</h3>
+          <p><strong>Shiny Land, Kuwait</strong> (6 months, 2024–2025)</p>
+          <p>Handled administrative operations and ensured business continuity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <div class="container">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Full Stack Web Developer - KodNest</li>
+        <li>Advanced SQL Programmer - HackerRank</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> saiprasadthirupathy@gmail.com</p>
+      <p><strong>Phone:</strong> +965 41095741</p>
+      <p><strong>Address:</strong> 3rd Street, Jleeb, Abasiya, Kuwait</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Saiprasad Thirupathi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
